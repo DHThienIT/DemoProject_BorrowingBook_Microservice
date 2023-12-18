@@ -42,3 +42,11 @@ https://docs.confluent.io/platform/current/installation/configuration/producer-c
 #Xem thêm các config cho file application.properties của Consumer
 https://docs.confluent.io/platform/current/installation/configuration/consumer-configs.html
 ```
+
+Cách khởi chạy Apache Kafka bằng lệnh
+
+![image](https://github.com/DHThienIT/DemoProject_BorrowingBook_Microservice/assets/114917226/73cb0d6d-1b4e-4114-a069-9652aeb022d2)
+
+##Nguồn tham khảo
+> [Xây dựng dự án cơ bản Microservice + Axon Server](https://www.youtube.com/playlist?list=PLDHSigHSDJWUTBa8r8tvQDQMZbemLBNp4)
+> [Khóa học Spring Boot & Kafka - JMaster.io](https://www.youtube.com/watch?v=HGywc-e5f4E&list=PLsfLgp1K1xQ42CWP8dsIa7OT2EJFnRGGd)
