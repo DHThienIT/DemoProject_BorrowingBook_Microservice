@@ -1,0 +1,19 @@
+package com.thien.notificationservice;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class NotificationController {
+	@Autowired
+	private KafkaTemplate<String, NotificationMessage> kafkaTemplate;
+
+	@PostMapping("/sendNotification")
+	public String sendNotification(@RequestBody NotificationMessage message) {
+		kafkaTemplate.send("notification-topic", message);
+		return "Notification sent: " + message.getMessage();
+	}
+}

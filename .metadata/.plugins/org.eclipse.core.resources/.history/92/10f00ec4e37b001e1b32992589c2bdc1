@@ -1,0 +1,22 @@
+package com.thien.notificationservice;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@RestController
+@EnableBinding(Sink.class)
+public class NotificationserviceApplication {
+	@Autowired
+	private CircuitBreakerFactory circuitBreakerFactory;
+
+	@StreamListener(Sink.INPUT)
+	public void consumeMessage(String message) {
+		System.out.println(message);
+	}
+
+	public static void main(String[] args) {
+		SpringApplication.run(NotificationserviceApplication.class, args);
+	}
+
+}

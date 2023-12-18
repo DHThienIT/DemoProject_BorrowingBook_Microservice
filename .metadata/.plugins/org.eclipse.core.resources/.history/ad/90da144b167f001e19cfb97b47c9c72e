@@ -1,0 +1,5 @@
+package com.thien.notificationservice.service;
+
+public class MessageService {
+
+}

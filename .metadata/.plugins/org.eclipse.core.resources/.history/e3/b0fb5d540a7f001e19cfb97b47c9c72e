@@ -1,0 +1,23 @@
+package com.thien.employeeservice.command.data;
+
+public class StatisticDTO {
+	private String message;
+	private String createdDate;
+
+	public StatisticDTO() {
+	}
+
+	public StatisticDTO(String message, String createdDate) {
+		super();
+		this.message = message;
+		this.createdDate = createdDate;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+}

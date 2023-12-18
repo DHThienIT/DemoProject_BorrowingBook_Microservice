@@ -1,0 +1,5 @@
+package com.thien.borrowingservice.query.model;
+
+public class BorrowingResponseModel {
+
+}

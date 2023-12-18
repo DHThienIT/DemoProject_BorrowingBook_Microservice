@@ -1,0 +1,5 @@
+package com.thien.commonservice.command;
+
+public class UpdateStatusBookCommand {
+
+}

@@ -1,0 +1,13 @@
+package com.thien.notificationservice;
+
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.stereotype.Service;
+
+@Service
+public class NotificationListener {
+	@KafkaListener(topics = "notification-topic", groupId = "notification-group")
+    public void listen(NotificationMessage message) {
+        // Xử lý tin nhắn từ Kafka ở đây
+        System.out.println("Received message: " + message.getMessage());
+    }
+}

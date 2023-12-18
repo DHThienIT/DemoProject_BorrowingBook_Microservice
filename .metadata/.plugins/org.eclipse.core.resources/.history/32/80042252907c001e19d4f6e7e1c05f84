@@ -1,0 +1,5 @@
+package com.thien.commonservice.event;
+
+public class BookUpdateStatusEvent {
+
+}

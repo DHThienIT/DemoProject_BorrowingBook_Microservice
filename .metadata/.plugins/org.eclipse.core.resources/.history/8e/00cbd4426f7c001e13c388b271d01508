@@ -1,0 +1,5 @@
+package com.thien.borrowingservice.command.api.models;
+
+public class BorrowRequestModel {
+
+}

@@ -1,0 +1,88 @@
+package com.thien.bookservice.command.aggregate;
+
+import org.axonframework.commandhandling.CommandHandler;
+import org.axonframework.eventsourcing.EventSourcingHandler;
+import org.axonframework.modelling.command.AggregateIdentifier;
+import org.axonframework.modelling.command.AggregateLifecycle;
+import org.axonframework.spring.stereotype.Aggregate;
+import org.springframework.beans.BeanUtils;
+
+import com.thien.bookservice.command.commands.CreateBookCommand;
+import com.thien.bookservice.command.commands.DeleteBookCommand;
+import com.thien.bookservice.command.commands.UpdateBookCommand;
+import com.thien.bookservice.command.events.BookCreatedEvent;
+import com.thien.bookservice.command.events.BookDeletedEvent;
+import com.thien.bookservice.command.events.BookUpdatedEvent;
+import com.thien.commonservice.command.UpdateStatusBookCommand;
+import com.thien.commonservice.event.BookUpdateStatusEvent;
+
+@Aggregate
+public class BookAggregate {
+	@AggregateIdentifier
+	private String bookId;
+	private String name;
+	private String author;
+	private Boolean isReady;
+
+	public BookAggregate() {
+	}
+
+	@CommandHandler // hàm này sẽ được gọi khi 1 CreateBookCommand được gửi đến hệ thống
+	public BookAggregate(CreateBookCommand createBookCommand) {
+		BookCreatedEvent bookCreatedEvent = new BookCreatedEvent();
+
+		BeanUtils.copyProperties(createBookCommand, bookCreatedEvent);
+//		lệnh trên để copy toàn bộ dữ liệu từ createBookCommand sang bookCreatedEvent
+
+		AggregateLifecycle.apply(bookCreatedEvent); // đưa BookCreatedEvent vào Aggregate
+	}
+
+	@CommandHandler
+	public void handle(UpdateBookCommand updateBookCommand) {
+		BookUpdatedEvent bookUpdatedEvent = new BookUpdatedEvent();
+		BeanUtils.copyProperties(updateBookCommand, bookUpdatedEvent);
+		AggregateLifecycle.apply(bookUpdatedEvent);
+	}
+
+	@CommandHandler
+	public void handle(DeleteBookCommand deleteBookCommand) {
+		BookDeletedEvent bookDeletedEvent = new BookDeletedEvent();
+		BeanUtils.copyProperties(deleteBookCommand, bookDeletedEvent);
+		AggregateLifecycle.apply(bookDeletedEvent);
+	}
+
+	@CommandHandler
+	public void handle(UpdateStatusBookCommand command) {
+		System.out.println("==============>>>>> 123456");
+		BookUpdateStatusEvent event = new BookUpdateStatusEvent();
+		BeanUtils.copyProperties(command, event);
+		AggregateLifecycle.apply(event);
+	}
+
+	@EventSourcingHandler // Phương thức này được gọi khi một BookCreatedEvent được áp dụng vào Aggregate.
+	public void on(BookCreatedEvent event) {
+		this.bookId = event.getBookId();
+		this.author = event.getAuthor();
+		this.isReady = event.getIsReady();
+		this.name = event.getName();
+	}
+
+	@EventSourcingHandler
+	public void on(BookUpdatedEvent event) {
+		this.bookId = event.getBookId();
+		this.author = event.getAuthor();
+		this.isReady = event.getIsReady();
+		this.name = event.getName();
+	}
+
+	@EventSourcingHandler
+	public void on(BookDeletedEvent event) {
+		this.bookId = event.getBookId();
+	}
+
+	@EventSourcingHandler
+	public void on(BookUpdateStatusEvent event) {
+		this.bookId = event.getBookId();
+		this.isReady = event.getIsReady();
+	}
+}

@@ -1,0 +1,17 @@
+1699282815066	Rename package 'com.thien.employeeservice.query.controllers'
+1699282820824	Rename package 'com.thien.employeeservice.query.projections'
+1699282829327	Rename package 'com.thien.employeeservice.query.queries'
+1699282836133	Rename package 'com.thien.employeeservice.command.aggregates'
+1699282842832	Rename package 'com.thien.employeeservice.command.commands'
+1699282848726	Rename package 'com.thien.employeeservice.command.controllers'
+1699282855326	Rename package 'com.thien.employeeservice.command.datas'
+1699282860853	Rename package 'com.thien.employeeservice.command.events'
+1699282866142	Rename package 'com.thien.employeeservice.command.models'
+1699282872244	Rename package 'com.thien.employeeservice.command.repositories'
+1699340201441	Copy compilation unit
+1699341528265	Rename type 'EmplpyeeUpdateDisciplinedEvent'
+1699341856723	Rename compilation unit 'UpdateDisciplinedEmplpyeeCommand.java'
+1699538975859	Delete element
+1699539387197	Delete element
+1699540076787	Move compilation unit
+1699544139287	Copy compilation unit

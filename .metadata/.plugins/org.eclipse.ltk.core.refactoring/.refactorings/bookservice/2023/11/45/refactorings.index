@@ -1,0 +1,17 @@
+1698940133353	Rename package 'com.thien.bookservice.command.command'
+1698940141931	Rename package 'com.thien.bookservice.command.aggregate'
+1698940226559	Move compilation unit
+1698940238364	Rename package 'com.thien.bookservice.command.controller'
+1698999923831	Copy compilation unit
+1699000132680	Copy compilation unit
+1699000763660	Copy compilation unit
+1699000786910	Delete element
+1699003079715	Copy compilation unit
+1699003752194	Copy compilation unit
+1699026689393	Rename type 'BookResponseModer'
+1699087394880	Copy packages
+1699087437697	Copy packages
+1699087473081	Copy package
+1699087629000	Rename package 'com.thien.bookservice.query.controller'
+1699087634835	Rename package 'com.thien.bookservice.query.model'
+1699087639421	Rename package 'com.thien.bookservice.query.projection'

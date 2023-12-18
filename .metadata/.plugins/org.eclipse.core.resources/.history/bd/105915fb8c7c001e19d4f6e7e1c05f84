@@ -1,0 +1,5 @@
+package com.thien.commonservice.querys;
+
+public class GetDetailsBookQuery {
+
+}

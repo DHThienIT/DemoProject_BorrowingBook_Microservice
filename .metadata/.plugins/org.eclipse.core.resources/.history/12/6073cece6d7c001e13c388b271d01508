@@ -1,0 +1,5 @@
+package com.thien.borrowingservice.config;
+
+public class AxonConfig {
+
+}

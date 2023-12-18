@@ -1,0 +1,20 @@
+package com.thien.notificationservice;
+
+import org.apache.kafka.clients.consumer.Consumer;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+@SpringBootApplication
+public class NotificationserviceApplication {
+	
+	@Bean
+    public Consumer<String> consume() {
+		System.out.println("Complete!!!!!!!");
+//		return message -> System.out.println("Message: "  + message);
+    }
+
+	public static void main(String[] args) {
+		SpringApplication.run(NotificationserviceApplication.class, args);
+	}
+}

@@ -1,0 +1,5 @@
+package com.thien.borrowingservice.query.projection;
+
+public class BorrowingProjection {
+
+}

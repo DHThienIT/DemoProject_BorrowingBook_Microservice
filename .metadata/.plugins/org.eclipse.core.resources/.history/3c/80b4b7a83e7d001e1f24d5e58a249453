@@ -1,0 +1,31 @@
+package com.thien.employeeservice.command.command;
+
+import org.axonframework.modelling.command.TargetAggregateIdentifier;
+
+public class UpdateDisciplinedEmployeeCommand {
+	@TargetAggregateIdentifier
+	private String employeeId;
+	private Boolean isDisciplined;
+
+	public UpdateDisciplinedEmployeeCommand(String employeeId, Boolean isDisciplined) {
+		super();
+		this.employeeId = employeeId;
+		this.isDisciplined = isDisciplined;
+	}
+
+	public String getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(String employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public Boolean getIsDisciplined() {
+		return isDisciplined;
+	}
+
+	public void setIsDisciplined(Boolean isDisciplined) {
+		this.isDisciplined = isDisciplined;
+	}
+}

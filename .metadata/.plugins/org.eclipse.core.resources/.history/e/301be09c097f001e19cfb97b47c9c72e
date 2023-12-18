@@ -1,0 +1,5 @@
+package com.thien.employeeservice.command.model;
+
+public class AccountRequestModel {
+
+}

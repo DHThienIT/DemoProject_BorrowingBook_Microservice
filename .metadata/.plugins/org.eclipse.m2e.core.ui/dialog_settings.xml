@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="F:\LVTN\commonservice"/>
+			<item value="F:\LVTN\borrowingservice"/>
+			<item value="F:\LVTN\notificationservice"/>
+			<item value="F:\LVTN\apigateway"/>
+			<item value="F:\LVTN\employeeservice"/>
+			<item value="F:\LVTN\discoveryservice"/>
+			<item value="F:\LVTN\bookservice"/>
+			<item value="F:\LVTN\demo"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

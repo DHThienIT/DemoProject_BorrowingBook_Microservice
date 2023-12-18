@@ -1,0 +1,5 @@
+spring.cloud.stream:
+  function.definition: consume
+  bindings:
+    consume-in-0:
+      destination: your-destination-name

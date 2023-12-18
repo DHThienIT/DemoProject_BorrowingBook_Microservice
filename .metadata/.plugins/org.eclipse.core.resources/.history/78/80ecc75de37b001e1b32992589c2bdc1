@@ -1,0 +1,2 @@
+spring.kafka.bootstrap-servers=your-kafka-broker
+spring.kafka.consumer.group-id=notification-group

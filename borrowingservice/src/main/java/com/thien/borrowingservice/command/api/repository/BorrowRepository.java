@@ -1,0 +1,13 @@
+package com.thien.borrowingservice.command.api.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.thien.borrowingservice.command.api.data.Borrowing;
+
+public interface BorrowRepository extends JpaRepository<Borrowing, String> {
+	List<Borrowing> findByEmployeeIdAndReturnDateIsNull(String employeeId);
+
+	Borrowing findByEmployeeIdAndBookIdAndReturnDateIsNull(String employeeId, String bookId);
+}

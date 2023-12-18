@@ -1,0 +1,5 @@
+package com.thien.employeeservice.command.event;
+
+public class EmplpyeeUpdateDisciplinedEvent {
+
+}

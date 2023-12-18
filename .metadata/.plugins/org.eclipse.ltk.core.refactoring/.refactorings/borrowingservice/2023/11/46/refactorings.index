@@ -1,0 +1,15 @@
+1699252265586	Rename package 'com.thien.borrowingservice.commands'
+1699252348142	Rename package 'com.thien.borrowingservice.command.aggregate'
+1699252431013	Rename package 'com.thien.borrowingservice.command'
+1699252440927	Delete element
+1699252454187	Rename package 'com.thien.borrowingservice.command'
+1699282200591	Rename package 'com.thien.borrowingservice.query.controllẻ'
+1699282259275	Rename package 'com.thien.borrowingservice.query.queries'
+1699282266497	Rename package 'com.thien.borrowingservice.query.queriy'
+1699282273594	Rename package 'com.thien.borrowingservice.command.api.services'
+1699282283700	Rename package 'com.thien.borrowingservice.command.api.models'
+1699282294026	Rename package 'com.thien.borrowingservice.command.api.events'
+1699282300175	Rename package 'com.thien.borrowingservice.command.api.controllers'
+1699282307192	Rename package 'com.thien.borrowingservice.command.api.commands'
+1699282312733	Rename package 'com.thien.borrowingservice.command.api.aggregates'
+1699282766123	Move compilation unit

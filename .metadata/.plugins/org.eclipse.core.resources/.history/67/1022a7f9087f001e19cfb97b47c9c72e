@@ -1,0 +1,5 @@
+package com.thien.employeeservice.command.data;
+
+public class StatisticDTO {
+
+}

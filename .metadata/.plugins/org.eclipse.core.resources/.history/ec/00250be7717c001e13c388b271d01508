@@ -1,0 +1,5 @@
+package com.thien.borrowingservice.command.api.events;
+
+public class BorrowingEventsHandler {
+
+}
